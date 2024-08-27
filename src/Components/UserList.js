@@ -70,6 +70,8 @@ const UserList = observer(() => {
           <th>No</th>
           <th>First Name</th>
           <th>Last Name</th>
+            <th>Email</th>
+            <th>Location</th>
           {/* Add other columns if needed */}
         </tr>
       </thead>
@@ -79,7 +81,8 @@ const UserList = observer(() => {
             <td>{index + 1}</td>
             <td>{user.name.first}</td>
             <td>{user.name.last}</td>
-            {/* Add other columns if needed */}
+           <td>{user.email}</td>
+            <td>{`${user.location.city}, ${user.location.country}`}</td>
           </tr>
         ))}
       </tbody>
