@@ -122,12 +122,46 @@
 }
 
 /* Add some responsiveness for smaller screens */
+/* For tablets and smaller screens */
 @media (max-width: 768px) {
-  .user-table {
-    width: 100%;
+  .App-header h1 {
+    font-size: 2em;
   }
 
   .search-bar {
-    width: 80%;
+    font-size: 0.9em;
+    max-width: 100%;
+  }
+
+  .user-table th, .user-table td {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  .pagination button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .App-header h1 {
+    font-size: 1.5em;
+  }
+
+  .search-bar {
+    font-size: 0.8em;
+    padding: 8px;
+  }
+
+  .user-table th, .user-table td {
+    font-size: 0.8em;
+    padding: 6px;
+  }
+
+  .pagination button {
+    padding: 6px 10px;
+    font-size: 0.8em;
   }
 }
