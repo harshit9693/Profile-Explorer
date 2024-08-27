@@ -123,28 +123,51 @@
 
 /* Add some responsiveness for smaller screens */
 /* For mobile phones */
+/* Media query for phone screens */
 @media (max-width: 480px) {
-  /* Hide all columns except for serial number, first name, and last name */
-  .user-table th:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)),
-  .user-table td:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
-    display: none;
+  .App-header {
+    padding: 15px;
+    font-size: 1.5em;  /* Adjust header font size for smaller screens */
   }
 
-  /* Adjust padding and font size for mobile */
+  .App-content {
+    margin-top: 70px;  /* Adjust margin based on new header height */
+  }
+
+  .App-header h1 {
+    font-size: 2em;    /* Slightly smaller font size for the main heading */
+  }
+
+  .user-list-container {
+    padding: 10px;
+  }
+
+  .user-table {
+    width: 100%;
+    font-size: 1em;    /* Adjust font size for better readability */
+  }
+
   .user-table th, .user-table td {
-    padding: 8px;
-    font-size: 0.8em;
+    padding: 8px 10px;  /* Reduce padding for table cells */
   }
 
-  .user-table th:nth-child(1)::before {
-    content: "No";
+  .search-bar-container {
+    margin: 10px 0;  /* Reduce margin for search bar container */
   }
 
-  .user-table th:nth-child(2)::before {
-    content: "First Name";
+  .search-bar {
+    width: 90%;  /* Full width for better usability on phones */
+    font-size: 0.9em;  /* Slightly smaller font size */
   }
 
-  .user-table th:nth-child(3)::before {
-    content: "Last Name";
+  .pagination-container {
+    flex-direction: column; /* Stack pagination buttons vertically */
+  }
+
+  .pagination-button {
+    margin: 5px 0;  /* Adjust margin to ensure buttons have space */
+    padding: 8px 12px;  /* Slightly smaller padding */
+    font-size: 0.9em;  /* Adjust font size for pagination buttons */
   }
 }
+
